@@ -14,18 +14,15 @@
           <div class="card" style="border-radius: 1rem;">
             <div class="row g-0">
               <div class="col-md-6 col-lg-5 d-none d-md-block align-self-center">
-                <img src="../CRUD/img/Login.jpg" alt="Login image" class="img-fluid" style="border-radius: 1rem 0 0 1rem;" />
+                <img src="../task_management/img/Login.jpg" alt="Login image" class="img-fluid" style="border-radius: 1rem 0 0 1rem;" />
               </div>
               <div class="col-md-6 col-lg-7 d-flex align-items-center">
                 <div class="card-body p-4 p-lg-5 text-black">
-                  <p>test one</p>
-                  <p>test two</p>
 
                   <form>
 
-                    <div class="d-flex align-items-center mb-3 pb-1">
-                      <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
-                      <span class="h1 fw-bold mb-0">Logo</span>
+                    <div class="d-flex align-items-center mb-3 pb-1 mt-3">
+                      <span class="h1 fw-bold mb-0">Welcome User!</span>
                     </div>
 
                     <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign into your account</h5>
@@ -41,7 +38,7 @@
                     </div>
 
                     <div class="pt-1 mb-4">
-                      <button class="btn btn-dark btn-lg btn-block" type="button">Login</button>
+                      <button class="btn btn-primary btn-lg btn-block w-100" type="button">Login</button>
                     </div>
                     <p class="mb-5 pb-lg-2" style="color: #393f81;">Don't have an account? 
                     <a href="#!" style="color: #393f81;">Register here</a></p>
