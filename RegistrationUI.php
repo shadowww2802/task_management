@@ -5,14 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        @media (max-width: 576px) { 
+            .background{
+                height: 100vh;
+            }
+            .img{
+                display: none;
+            }
+            .card{
+                margin-top: 7vh;
+            }
+        }
+        @media (min-width: 576px) { 
+            .background{
+                height: 100vh;
+            }
+            .img{
+                display: none;
+            }
+            .card{
+                margin-top: 7vh;
+            }
+        }
+        @media (min-width: 768px) {
+            .background{
+                height: 100vh;
+            }
+            .img{
+                display: none;
+            }
+            .card{
+                margin-top: 7vh;
+            }
+        }
+        @media (min-width: 992px) { 
+            .background{
+                height: 100vh;
+            }
+            .img{
+                display: flex;
+            }
+            .card{
+                margin-top: 5vh;
+            }
+        }
+        @media (min-width: 1200px) {
+            .background{
+                height: 100vh;
+            }
+            .img{
+                display: flex;
+            }
+            .card{
+                margin-top: 5vh;
+            }
+        }
+    </style>
 </head>
 <body>
-    <section class="vh-100" style="background-color: #4b4df7;">
-        <div class="container h-100">
-            <div class="row d-flex justify-content-center align-items-center h-100" >
+    <section class="background" style="background-color: #4b4df7;">
+        <div class="container">
+            <div class="row d-flex justify-content-center align-items-center" >
             <div class="col-lg-12 col-xl-11">
                 <div class="card text-black" style="border-radius: 25px;" >
-                <div class="card-body p-md-5">
+                <div class="card-body p-md-5" style="card">
                     <div class="row justify-content-center" style="margin-left: 10px">
                     <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1 mt-3">
 
@@ -66,7 +123,7 @@
 
                     </div>
                     <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
-                        <img src="../task_management/img/Registration.png" alt="Registration Image" class="img-fluid" />
+                        <img src="../task_management/img/Registration.png" alt="Registration Image" class="img img-fluid" />
                     </div>
                     </div>
                 </div>
