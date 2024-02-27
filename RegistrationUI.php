@@ -136,7 +136,7 @@ session_start();
                                             <button type="submit" class="btn btn-primary btn-lg w-100 mt-3" name="registerButton">Register</button>
                                         </div>
 
-                                        <p class="mb-5 pb-lg-2 mt-5" style="color: #393f81;">Already have an Account?
+                                        <p class="mb-5 pb-lg-2 mt-1" style="color: black;">Already have an Account?
                                             <a href="LoginUI.php" style="color: #393f81;">Login here</a>
                                         </p>
 
