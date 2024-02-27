@@ -61,10 +61,6 @@ session_start();
             .img {
                 display: flex;
             }
-
-            .cardStyle {
-                margin-top: 5vh;
-            }
         }
 
         @media (min-width: 1200px) {
@@ -75,10 +71,6 @@ session_start();
             .img {
                 display: flex;
             }
-
-            .cardStyle {
-                margin-top: 5vh;
-            }
         }
     </style>
 </head>
@@ -88,8 +80,8 @@ session_start();
         <div class="container">
             <div class="row d-flex justify-content-center align-items-center">
                 <div class="col-lg-12 col-xl-11">
-                    <div class="card text-black" style="border-radius: 25px;">
-                        <div class="card-body p-md-5 cardStyle">
+                    <div class="card text-black" style="border-radius: 25px; margin-top: 6vh;">
+                        <div class="card-body p-md-5">
                             <div class="row justify-content-center" style="margin-left: 10px">
                                 <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1 mt-3">
 

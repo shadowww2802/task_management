@@ -20,7 +20,7 @@
 
                             <!-- Side image -->
                             <div class="col-md-6 col-lg-5 d-none d-md-block align-self-center">
-                                <img src="../img/createTask.png" alt="Login Image" class="img-fluid" style="border-radius: 1rem 0 0 1rem;" />
+                                <img src="../img/createTask.png" alt="Login Image" class="img-fluid" style="margin-left: 1em;" />
                             </div>
 
                             <div class="col-md-6 col-lg-7 d-flex align-items-center">
@@ -37,26 +37,37 @@
                                         </div>
                                         <div class="form-outline mb-4">
                                             <label class="form-label" for="form2Example17">Task Description</label>
-                                            <input type="text" id="form2Example17" class="form-control form-control-lg" name="description" required />
-                                        </div>
-                                        <select class="form-select form-select-lg mb-3" name="priority" aria-label="Large select example">
-                                            <option selected>Priority Level</option>
-                                            <option value="Low">Low</option>
-                                            <option value="Medium">Medium</option>
-                                            <option value="High">High</option>
-                                        </select>
-                                        <div class="form-outline mb-4">
-                                            <label class="form-label" for="form2Example17">Due Date <i>(YYYY/MM/DD)</i></label>
-                                            <input type="text" id="form2Example17" class="form-control form-control-lg" name="due_date" required />
+                                            <textarea id="form2Example17" class="form-control form-control-lg align-bottom" name="description" style="height: 150px;" required></textarea>
                                         </div>
 
-
-                                        <div class="pt-1 mb-4">
-                                            <button class="btn btn-primary btn-lg btn-block w-100" type="submit" name="createTaskButton">Create Task</button>
+                                        <div class="row mb-5">
+                                            <div class="col-md-6">
+                                                <label class="form-label" for="form2Example17">Set Priority Level</label>
+                                                <select class="form-select form-select-lg mb-3" name="priority" aria-label="Large select example">
+                                                    <option disabled selected>Not Stated</option>
+                                                    <option value="Low">Low</option>
+                                                    <option value="Medium">Medium</option>
+                                                    <option value="High">High</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-outline mb-4">
+                                                    <label class="form-label" for="form2Example17">Due Date <i>(YYYY/MM/DD)</i></label>
+                                                    <input type="text" id="form2Example17" class="form-control form-control-lg" name="due_date" required />
+                                                </div>
+                                            </div>
                                         </div>
-                                        <a href="view_task.php">
-                                            <button type="button" class="btn btn-primary btn-lg btn-block w-100">Go back</button>
-                                        </a>
+
+                                        <div class="pt-5 row">
+                                            <div class="col-md-6 mb-2">
+                                                <button class="btn btn-primary btn-lg btn-block w-100" type="submit" name="createTaskButton">Create</button>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <a href="view_task.php">
+                                                    <button type="button" class="btn btn-outline-secondary btn-lg btn-block w-100">Cancel</button>
+                                                </a>
+                                            </div>
+                                        </div>
                                     </form>
                                 </div>
                             </div>
