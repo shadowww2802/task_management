@@ -7,10 +7,6 @@ $database = "task_management";
 
 $con = mysqli_connect("$host", "$username", "$password", "$database");
 
-if(!$con)
-{
-    die("". mysqli_connect_error());
+if (!$con) {
+    die("" . mysqli_connect_error());
 }
-
-
-?>
