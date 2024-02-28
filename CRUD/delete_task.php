@@ -36,7 +36,7 @@ if ($result->num_rows > 0) {
     <!-- Creating a form -->
     <form action="../process.php" method="post">
         <div class="modal" id="myModal">
-            <div class="modal-dialog">
+            <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title">Delete Task Confirmation</h5>
