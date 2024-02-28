@@ -31,7 +31,7 @@ elseif (isset($_POST["loginButton"])) {
 
     if ($result->num_rows > 0) {
         $_SESSION['email'] = $email;
-        header("Location: index.php");
+        header("Location: ./CRUD/view_task.php");
         exit();
     } else {
         header("Location: LogInUI.php");
@@ -39,6 +39,9 @@ elseif (isset($_POST["loginButton"])) {
     }
 }
 
+/** CRUD OPERATIONS */
+
+// Check if the value is createTaskButton
 elseif (isset($_POST["createTaskButton"])) {
 
     $task_title = $_POST["task_title"];
@@ -47,6 +50,55 @@ elseif (isset($_POST["createTaskButton"])) {
     $due_date = $_POST["due_date"];
 
     $query = "INSERT INTO `tasks`(`task_title`, `description`, `priority`, `due_date`) VALUES ('$task_title','$description','$priority','$due_date')";
+    $query_result = mysqli_query($con, $query);
+
+    if ($query_result === true) {
+        header("Location: CRUD/view_task.php");
+        exit();
+    } else {
+        echo "error";
+        exit();
+    }
+}
+
+else if(isset($_POST['updateTaskButton'])) {
+
+    $task_id = $_POST["task_id"];
+    $task_title = $_POST["task_title"];
+    $description = $_POST["description"];
+    $priority = $_POST["priority"];
+    $due_date = $_POST["due_date"];
+
+    $query = "
+        UPDATE tasks 
+        SET task_title = '$task_title',
+        description = '$description',
+        priority = '$priority',
+        due_date = '$due_date'
+        WHERE task_id = '$task_id';
+        ";
+    
+    $query_result = mysqli_query($con, $query);
+
+    if ($query_result === true) {
+        header("Location: CRUD/view_task.php");
+        exit();
+    } else {
+        echo "error";
+        exit();
+    }
+
+}
+
+
+else if(isset($_POST['deleteTaskButton'])) {
+    echo 'deleted';
+
+    $task_id = $_POST["deleteTaskButton"];
+
+    // Create query
+    $query = "DELETE FROM tasks WHERE task_id='$task_id';";
+
     $query_result = mysqli_query($con, $query);
 
     if ($query_result === true) {

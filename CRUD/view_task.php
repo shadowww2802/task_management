@@ -1,9 +1,11 @@
 <?php
 session_start();
+
 include('../dbconfig.php');
+
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$database", $username, $password);
-    $sql = 'SELECT task_title, description, priority, due_date FROM tasks';
+    $sql = 'SELECT * FROM tasks'; //asterisk which is get all
     $q = $pdo->query($sql);
     $q->setFetchMode(PDO::FETCH_ASSOC);
 } catch (PDOException $e) {
@@ -56,12 +58,8 @@ try {
                                 <tbody>
                                     <?php while ($r = $q->fetch()) : ?>
                                         <tr class="fw-normal">
-                                            <!-- <th>
-                                                <img src="../img/ava5-bg.webp" alt="avatar 1" style="width: 45px; height: auto;">
-                                                <?php echo $r['first_name'] ?>
-                                            </th> -->
                                             <td style="width: 10em; text-align: center;">
-                                                <?php echo $r['task_title'] ?>
+                                                <?php echo $r['task_title'];?>
                                             </td>
                                             <td>
                                                 <?php echo $r['description'] ?>
@@ -82,15 +80,17 @@ try {
                                                         break;
                                                 }
                                             ?>">
-                                                <!-- <h6 class="mb-0"><span class="badge bg-danger">High priority</span></h6> -->
                                                 <?php echo $r['priority'] ?>
                                             </td>
                                             <td style="width: 8em; text-align: center;">
                                                 <?php echo $r['due_date'] ?>
                                             </td>
                                             <td class="text-center" style="width: 8em;">
-                                                <a href="edit_task.php" data-mdb-toggle="tooltip" title="Edit"><i class="fas fa-solid fa-pen fa-lg text-success me-4"></i></a>
-                                                <a href="delete_task.php" data-mdb-toggle="tooltip" title="Delete"><i class="fas fa-trash-alt fa-lg text-danger"></i></a>
+                                                <a href=<?php echo "edit_task.php?id=" . $r['task_id']; // I replace it with task_id ?> 
+                                                data-mdb-toggle="tooltip" 
+                                                title="Edit">
+                                                <i class="fas fa-solid fa-pen fa-lg text-success me-4"></i></a>
+                                                <a href=<?php echo "delete_task.php?id=" . $r['task_id']; // I replace it with task_id ?> data-mdb-toggle="tooltip" title="Delete"><i class="fas fa-trash-alt fa-lg text-danger"></i></a>
                                             </td>
                                         </tr>
                                     <?php endwhile; ?>
@@ -114,5 +114,4 @@ try {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 </body>
-
 </html>
